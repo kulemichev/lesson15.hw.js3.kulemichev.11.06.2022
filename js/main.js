@@ -89,7 +89,7 @@
   // console.log(counting.value()); // 201
 
   var counting = (function () {
-    let count = 0;
+    var count = 0;
     return {
       value(num) {
         if (num !== undefined) count = num;
@@ -149,9 +149,9 @@
 
   // console.log(myPow(2, 3, myPrint)); // 2^3=8
 
-  let myPrint = (a, b, res) => `${a}^${b}=${res}`;
-  let myPow = (a, b, callback) => {
-    let pow = (x, n) => {
+  var myPrint = (a, b, res) => `${a}^${b}=${res}`;
+  var myPow = (a, b, callback) => {
+    var pow = (x, n) => {
       if (n !== 1) return (x *= pow(x, n - 1));
       return x;
     };
@@ -212,7 +212,7 @@
    * - если сеттеру used присвоено значение 'used', ничего делать не нужно
    */
 
-  // let yearNow = new Date().getFullYear(); // получить текущий год как число
+  // var yearNow = new Date().getFullYear(); // получить текущий год как число
 
   // console.log(car.info()); // Chevrolet Lacetti, 2000cc, year 2010, used
 
@@ -235,8 +235,8 @@
     return `${this.name} ${this.model}, ${this.engine}cc, year ${this.year}, ${this.used}`;
   }
 
-  let yearNow = new Date().getFullYear();
-  let car = {
+  var yearNow = new Date().getFullYear();
+  var car = {
     name: "Ford",
     model: "Focus",
     year: 1998,
@@ -249,7 +249,7 @@
       if (value === "new" && this.year < yearNow) this.year = yearNow;
     },
   };
-  let car2 = {
+  var car2 = {
     name: "Opel",
     model: "Zafira",
     year: 2008,
@@ -287,8 +287,8 @@
   // console.log(myMax(list)); // 233
 
 
-  let list = [12, 23, 100, 34, 56, 9, 233];
-  let arr = list;
+  var list = [12, 23, 100, 34, 56, 9, 233];
+  var arr = list;
 
   function myMax(arr) {
     return Math.max.apply(Math, arr);
@@ -324,13 +324,13 @@
     return a * b;
   }
 
-  let myDouble = myMul.bind(null, 2);
+  var myDouble = myMul.bind(null, 2);
   console.log(myDouble(3)); // = myMul(2, 3) = 6
   console.log(myDouble(4)); // = myMul(2, 4) = 8
   console.log(myDouble(5)); // = myMul(2, 5) = 10
 
   // аналогичным образом создайте функцию myTriple(n), которая утраивает принимающий параметр, возвращая результат.
-  let myTriple = myMul.bind(null, 3);
+  var myTriple = myMul.bind(null, 3);
 
   console.log(myTriple(3)); // = myMul(3, 3) = 9
   console.log(myTriple(4)); // = myMul(3, 4) = 12
@@ -355,8 +355,8 @@
   // console.log(myUniq(notUniqStrings));
 
 
-  let notUniqNums = [1, 1, 2, 3, 4, 5, 6, 7];
-  let notUniqStrings = [
+  var notUniqNums = [1, 1, 2, 3, 4, 5, 6, 7];
+  var notUniqStrings = [
     "Bob",
     "Kate",
     "John",
@@ -369,8 +369,8 @@
     "Tom",
   ];
 
-  let myUniq = (arr) => {
-    let set = new Set();
+  var myUniq = (arr) => {
+    var set = new Set();
 
     arr.forEach((val) => {
       set.add(val);
